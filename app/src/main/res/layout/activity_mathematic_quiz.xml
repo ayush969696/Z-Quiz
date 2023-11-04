@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mathbg"
+    tools:context=".topics.QuizActivity">
+
+    <!-- Top Image or Header -->
+    <ImageView
+        android:id="@+id/headerImage"
+        android:layout_width="120dp"
+        android:layout_height="115dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="28dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mathematics" />
+
+    <!-- Quiz Question -->
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_below="@+id/headerImage"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:text=" Loading..."
+        android:textSize="22sp" />
+
+    <!-- Options using RadioButtons -->
+    <RadioGroup
+        android:id="@+id/optionsRadioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option1"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="#017C71"
+            android:fontFamily="monospace"
+            android:text="Loading.."
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option2"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20sp"
+            android:backgroundTint="#017C71"
+            android:fontFamily="monospace"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp"
+            android:text="Loading.."
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option3"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:textSize="20sp"
+            android:backgroundTint="#017C71"
+            android:fontFamily="monospace"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp"
+            android:text="Loading.."
+            android:textColor="#FFFFFF" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/option4"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:backgroundTint="#017C71"
+            android:textSize="20sp"
+            android:fontFamily="monospace"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="18dp"
+            android:text="Loading.."
+            android:textColor="#FFFFFF" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:indeterminateTint="#007C71"
+            android:visibility="invisible"
+            />
+
+    </RadioGroup>
+
+</RelativeLayout>
